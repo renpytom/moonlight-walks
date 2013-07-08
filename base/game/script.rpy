@@ -127,9 +127,11 @@ init:
 
 label splashscreen:
 
+    call ouya_instructions_once
+
     scene black
     with None
-    pause 1.0
+    pause 0.5
     
     scene bigbeach1 at Position(xalign=0, yalign=0)
     if renpy.with_statement(dissolve):
