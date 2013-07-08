@@ -73,7 +73,7 @@ init:
     python:
         def gallery_button(x, y, page, condition):
             if eval(condition):
-                ui.button(xpos=x, ypos=y, xanchor=0, yanchor=0, clicked=ui.jumps("gallery_" + page))
+                ui.button(xpos=x, ypos=y, xanchor=0, yanchor=0, clicked=ui.jumps("gallery_" + page), hover_foreground=Image("gal-hover.png", xalign=0.5, yalign=0.5))
                 ui.image("gal-" + page + ".png")
             else:
                 ui.image("gal-locked.png", xpos=x, ypos=y, xanchor=0, yanchor=0)

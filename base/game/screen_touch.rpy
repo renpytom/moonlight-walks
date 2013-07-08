@@ -43,7 +43,9 @@ init 3 python:
         style.menu_choice.size = 35
         style.menu_choice_button.ymargin = 7
         
-        
+    if renpy.variant('tv'):
+        style.window.yminimum = 210
+        style.window.bottom_padding = 10
         
 ##############################################################################
 # Main Menu 
