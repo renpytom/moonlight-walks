@@ -65,17 +65,23 @@ screen main_menu:
     # The main menu buttons.
     frame:
         xalign 0.5
-        yalign .98
+        yalign 1.0
+        ymargin 15
 
         grid 2 3:
             style_group "mm"
             xfill True
             
             textbutton _("Start Game") action Start() default True
-            textbutton _("Load Game") action ShowMenu("load")
             textbutton _("Extras Menu") action Start("extras")
+            textbutton _("Load Game") action ShowMenu("load")
             textbutton _("Preferences") action ShowMenu("preferences")
-            null
+            
+            if renpy.variant('ouya'):
+                textbutton _("Help") action Start('ouya_instructions')
+            else:
+                null
+            
             textbutton _("Quit") action Quit(confirm=False)
         
 
@@ -97,20 +103,23 @@ screen navigation:
     frame:
         style_group "gm_nav"
 
-        xmargin 5
-        ymargin 5
+        xmargin 10
+        ymargin 15
         
         has grid 2 2:
             xfill True
             
-        textbutton _("Return") action Return()
-        textbutton _("Preferences") action ShowMenu("preferences")
-
         if renpy.context()._main_menu:
             textbutton _("Load Game") action ShowMenu("load")
-            textbutton _("Quit") action Quit()
         else:
             textbutton _("Save Game") action ShowMenu("save")            
+            
+        textbutton _("Preferences") action ShowMenu("preferences")
+        textbutton _("Return") action Return()
+
+        if renpy.context()._main_menu:
+            textbutton _("Quit") action Quit()
+        else:
             textbutton _("Main Menu") action MainMenu()
 
 
