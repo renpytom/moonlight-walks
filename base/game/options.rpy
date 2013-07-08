@@ -16,6 +16,8 @@ init -1 python hide:
     config.developer = False
     config.debug_image_cache = False
     
+    config.version = "2.2"
+    
     ## These control the width and height of the screen.
 
     config.screen_width = 800
@@ -38,12 +40,14 @@ init -1 python hide:
     style.mm_root.background = Image('new/beach1a.jpg')
     style.gm_root.background = Image('new/beach3.jpg')
 
+    style.button_text.hover_color = "#ff0"
+
     style.file_picker_button.background = Frame('saveslot.png', 16, 16)
     style.file_picker_button.xpadding = 2
     style.file_picker_button.ypadding = 2
 
     style.file_picker_text.color = "#00c0ff"
-    style.file_picker_text.hover_color = "#00ffff"
+    style.file_picker_text.hover_color = "#ff0"
     style.file_picker_text.insensitive_color = "#c0c0c0"
     # style.file_picker_new.idle_color = "#ff8080"
     # style.file_picker_new.hover_color = "#ff4040"
