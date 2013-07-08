@@ -30,6 +30,8 @@ label ouya_instructions_once:
 
 label ouya_instructions:
     
+    $ _game_menu_screen = None
+    
     if not renpy.variant('ouya'):
         return
         
