@@ -3,7 +3,7 @@
 
 
 init 3 python:
-    if renpy.variant('touch'):
+    if renpy.variant('android'):
         style.button_text.size = 40
         style.button.xalign = 0.5
         style.button.xpadding = 7
@@ -15,16 +15,12 @@ init 3 python:
         style.gm_nav_frame.yalign = 1.0
         style.gm_nav_frame.xalign = 1.0
 
-        
         style.large_button_text.size = 30
         style.large_button_text.color = "#00c0ff"
-        style.large_button_text.hover_color = "#00ffff"
+        style.large_button_text.hover_color = "#ffff00"
         style.large_button_text.insensitive_color = "#c0c0c0"
         style.file_picker_button.xpadding = 20
         style.file_picker_button.ypadding = 20
-
-        style.yesno_label_text.size = 32
-        style.yesno_label_text.color = "#ff0"
 
         style.pref_slider.xmaximum = 700
         style.pref_slider.xalign = 0.5
@@ -57,7 +53,7 @@ init 3 python:
 
 screen main_menu:
 
-    variant "touch"
+    variant "android"
     
     # This ensures that any other menu screen is replaced.
     tag menu
@@ -75,7 +71,7 @@ screen main_menu:
             style_group "mm"
             xfill True
             
-            textbutton _("Start Game") action Start()
+            textbutton _("Start Game") action Start() default True
             textbutton _("Load Game") action ShowMenu("load")
             textbutton _("Extras Menu") action Start("extras")
             textbutton _("Preferences") action ShowMenu("preferences")
@@ -91,7 +87,7 @@ screen main_menu:
 # http://www.renpy.org/doc/html/screen_special.html#navigation
 screen navigation:
 
-    variant "touch"
+    variant "android"
     
     # The background of the game menu.
     window:
@@ -131,7 +127,7 @@ screen navigation:
     
 screen file_picker:
 
-    variant "touch"
+    variant "android"
     
     frame:
         style "file_picker_frame"
@@ -184,7 +180,7 @@ screen file_picker:
                     
 screen save:
 
-    variant "touch"
+    variant "android"
     
     # This ensures that any other menu screen is replaced.
     tag menu
@@ -194,7 +190,7 @@ screen save:
 
 screen load:
 
-    variant "touch"
+    variant "android"
 
     # This ensures that any other menu screen is replaced.
     tag menu
@@ -211,7 +207,7 @@ screen load:
     
 screen preferences:
 
-    variant "touch"
+    variant "android"
     
     tag menu
 

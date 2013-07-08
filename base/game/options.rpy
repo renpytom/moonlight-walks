@@ -78,9 +78,7 @@ init -1 python hide:
     style.pref_frame.xpos = 0.5
     style.pref_frame.xanchor = 0.5
     
-    style.pref_label_text.color = "#ff0"
     style.pref_label.xalign = .5
-    style.yesno_prompt_text.color = "#ff0"
     # style.prefs_pref_choicebox.xalign = 0.5
     style.prefs_button.xalign = 0.5
     style.prefs_jump_button.xalign = 0.5
@@ -190,7 +188,11 @@ init -1 python hide:
     ## is run, so the persisten information can be found by the init code.)
 python early:
     config.save_directory = "moonlight-2"
-    
+
+init python:
+    style.pref_label_text.color = "#fff"
+    style.yesno_label_text.color = "#fff"
+
 init -1 python hide:
     #########################################
     ## Default values of Preferences.
