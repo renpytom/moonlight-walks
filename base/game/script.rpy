@@ -1975,7 +1975,7 @@ label ending:
     play music "end_theme.ogg"
     with slowdissolve
 
-    show credit "\"Moonlight Walks\"\n\n{size=-12}Version 2.1{/size}"
+    show credit "\"Moonlight Walks\"\n\n{size=-12}Version 2.2{/size}"
     with slowdissolve
     $ renpy.pause(ending_delay)
 
@@ -1995,7 +1995,7 @@ label ending:
     with slowdissolve
     $ renpy.pause(ending_delay)
 
-    show credit "Thank you for playing!\n\n{size=-12}Copyright 2005-2011 PyTom/American Bishoujo{/size}"
+    show credit "Thank you for playing!\n\n{size=-12}Copyright 2005-2013 PyTom/American Bishoujo{/size}"
     with dissolve
     $ renpy.pause()
      
